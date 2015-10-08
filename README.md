@@ -15,7 +15,7 @@ Start logging by:
 
 End logging with
 ```
-/.stop MAC >> your_file
+./stop MAC >> your_file
 ```
 
 This logs the heartrate notifications and the start and end system time.
