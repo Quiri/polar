@@ -1,0 +1,2 @@
+#!/bin/bash
+gatttool --handle 0x0003 --char-read -b $1 | sed 's/.*: //' | xxd -r -p | sed 's/$/\n/'
