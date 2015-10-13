@@ -2,6 +2,13 @@
 
 Install bluez which comes with gatttool and hciscan.
 
+```
+sudo apt-get install bluez
+sudo apt-get install git
+git clone https://github.com/Quiri/polar
+cd polar
+```
+
 Put on the device and look for it's MAC address. You can use
 
 ```
