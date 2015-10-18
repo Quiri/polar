@@ -1,5 +1,11 @@
 #!/bin/bash
-sudo timeout -s 2 10 hcitool lescan > scantmp
+if [[ -z "$1" ]]
+then
+	dur=5
+else
+	dur=$1
+fi
+sudo timeout -s 2 $dur hcitool lescan > scantmp
 cat scantmp | cut -f1 -d" " | grep : | sort | uniq
 rm scantmp
 

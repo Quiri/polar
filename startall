@@ -3,5 +3,7 @@
 mkdir -p $1
 
 while read line; do
+	echo "Starting $line  ...";
 	./start $line > $1/$line.csv &
+	sleep 0.1
 done
