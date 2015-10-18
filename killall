@@ -1,4 +1,11 @@
 #!/bin/bash
 
-kill `pgrep gatttool`
+pid=$(pgrep gatttool)
+
+if [ $? -eq 1 ]
+then
+	echo "No heart rate transmitting found"
+else
+	kill pgrep "$pid"
+fi
 
