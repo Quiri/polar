@@ -35,7 +35,7 @@ This logs the heartrate notifications and the start and end system time.
 The second hex number is the heart rate.
 
 
-If you want to start logging multiple devices simultaneously, you can use the `startall` script. It takes MAC addresses as input and the directory to write the logs to. If directory does not exist, it will be created. The logfile have the names MACaddress.csv.
+If you want to start logging multiple devices simultaneously, you can use the `startall` script. It takes MAC addresses as input and the directory to write the logs to as a parameter. If directory does not exist, it will be created. The logfile have the names MACaddress.csv.
 
 Scan MAC addr. and start logging for all found devices:
 ```
