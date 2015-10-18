@@ -51,7 +51,7 @@ nano MACaddr
 # Start from file, write to directory test1/group1:
 cat MACaddr | ./startall test1/group1
 #or
-./startall < MACaddr
+./startall test1/group1 < MACaddr
 ```
 
 Stop all logging activity with
