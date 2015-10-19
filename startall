@@ -4,6 +4,6 @@ mkdir -p $1
 
 while read line; do
 	echo "Starting $line  ...";
-	./start $line > $1/$line.csv &
+	./start $line > $1/$(echo $line | sed "s/://g").csv &
 	sleep 0.1
 done
