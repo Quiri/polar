@@ -23,8 +23,10 @@ or use the the `scan` script to scan for devices for 10 seconds and print the un
 
 Start logging by:
 ```
-./start MAC > your_file &
+./start MAC hciX > your_file &
 ```
+where hciX is the hci address of your bluetooth dongle. Often its `hci0` for the first, `hci1` for the second dongle and so on.
+
 
 End logging with
 ```
