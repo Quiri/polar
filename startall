@@ -2,8 +2,13 @@
 
 mkdir -p $1
 
+h=0
+hci=($(hcitool dev | tail -n +2 | cut -f2))
+l=${#hci[@]}
+
 while read line; do
 	echo "Starting $line  ...";
-	./start $line > $1/$(echo $line | sed "s/://g").csv &
+	./start $line $(hci[$h]) > $1/$(echo $line | sed "s/://g").csv &
 	sleep 0.3
+	h=$(( ($h+1) % $l ))	
 done
