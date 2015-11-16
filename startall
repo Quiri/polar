@@ -8,7 +8,7 @@ l=${#hci[@]}
 
 while read line; do
 	echo "Starting $line  ...";
-	./start $line $(hci[$h]) > $1/$(echo $line | sed "s/://g").csv &
+	./start $line ${hci[$h]} >> $1/$(echo $line | sed "s/://g").csv &
 	sleep 0.3
 	h=$(( ($h+1) % $l ))	
 done
