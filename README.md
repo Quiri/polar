@@ -65,5 +65,10 @@ which is basically just the
 ```
 kill `pgrep gatttool`
 ```
-
 command.
+
+If you run into problems with scan (I/O error or similar) you can run 
+```
+.\repair
+```
+to kill all scan processes and restart the bluetooth devices (hci).
