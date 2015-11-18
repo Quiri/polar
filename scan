@@ -5,7 +5,8 @@ then
 else
 	dur=$1
 fi
-sudo timeout -s 2 $dur hcitool lescan > scantmp
+rm -f scantmp
+sudo timeout -s 2 $dur hcitool lescan >> scantmp
 cat scantmp | cut -f1 -d" " | grep : | sort | uniq
 rm scantmp
 
